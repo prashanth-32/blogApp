@@ -1,0 +1,275 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.content{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.logo{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.login{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.img{
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+.img img{
+  margin:5px 0px;
+  width: 50%;
+  height: auto;
+}
+.desc{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.context{
+  font-size: 1.15rem;
+}
+
+.info{
+  margin-top: 5px;
+  font-size: 0.7rem;
+  color: rgb(84, 60, 60);
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  button{
+    border-radius: 6px;
+    padding: 5px;
+    background-color: #373333;
+    cursor : pointer;
+    color: white;
+
+  }
+}
+
+.box{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  margin: auto;
+  input{
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom: none;
+  }
+  button{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #373333;
+    cursor: pointer;
+    color: white;
+    font-size: 1.09rem;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+}
+
+.container{
+  width: 60%;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 10px;
+  align-items: center;
+  gap: 20px;
+  .left{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img{
+      width: 80%;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+  }
+  .right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+    .title{
+      font-weight: bold;
+    }
+    .summary{
+      font-size: 0.95rem;
+    }
+    .posted{
+      font-size: 0.7rem;
+    }
+    .btn{
+      padding: 5px;
+      border-radius: 5px;
+      background-color: rgb(241, 41, 41);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border:none;
+      width: max-content;
+    }
+  }
+}
+
+.postContainer{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+  gap: 20px;
+  line-height: 2rem;  
+  font-family: 'Times New Roman', Times, serif;
+  .postImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img{
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    }
+  }
+  .postDescription{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      .postAuthor{
+        background-color: #373333;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        font-weight: bold;
+        width: max-content;
+        cursor: pointer;
+      }
+  }
+  .btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    button{
+      width: max-content;
+      padding: 10px;
+      background-color: #373333;
+      border-radius: 6px;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+.loading{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width : 1000px) {
+  .container{
+    width: 60%;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 10px;
+    .left{
+      width: 40%;
+      height: 30vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      img{
+        width: 80%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+    }
+    .right{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .summary{
+        font-size: 0.95rem;
+      }
+      .posted{
+        font-size: 0.7rem;
+      }
+      .btn{
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgb(241, 41, 41);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border:none;
+        width: max-content;
+      }
+    }
+  }
+  .postContainer{
+   width: 60%; 
+   .postImg{
+    max-width: 80%;
+   }
+   .postDescription{
+    width: 80%;
+   }
+  }
+}

@@ -1,0 +1,32 @@
+h2{
+    text-align: center;
+    margin: 50px 0px;
+}
+.Login,.Register{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    max-height: 40%;
+    margin-left: 40%;
+    gap: 10px;
+    justify-content: center;
+    input{
+        padding: 10px;
+        border-radius: 6px;
+        background-color: #dddd;
+        border: 2px solid #5a5a5a;
+        font-weight: bold;
+    }
+    button{
+        max-width: 50%;
+        margin: auto;
+        padding: 7px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: black;
+        color:white;
+    }
+}
