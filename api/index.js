@@ -11,16 +11,16 @@ import multer from "multer";
 import fs from 'fs';
 import Post from "./models/Post.model.js";
 import path from "path";
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url'
+import { env } from "process";
+dotenv.config();
 
 
 const salt = bcrypt.genSaltSync(10);
 const app = express();
-const secret = process.env.SECRET;
+const secret = process.env.JWT_SECRET;
 const upload = multer({dest:'uploads/'})
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-dotenv.config();
 
 app.use(cors({
   origin: 'https://blogapp-frontend-r0z0.onrender.com',
@@ -31,6 +31,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(path.join(__dirname + '/uploads')));
 
+console.log(secret);
 
 const PORT = process.env.PORT || 4000;
 
