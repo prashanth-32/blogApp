@@ -5,7 +5,7 @@ export default function Content() {
   const [posts,setPost] = useState([])
   useEffect(() => {
     async function fetchData(){
-    const res = await fetch('http://localhost:4000/post');
+    const res = await fetch('https://blogapp-backend-1apt.onrender.com//post');
     const data = await res.json();
     setPost(data);
     }

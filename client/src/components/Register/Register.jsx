@@ -8,7 +8,7 @@ export default function Register() {
 
   async function handleRegister(event) {
     event.preventDefault();
-    const res = await fetch("http://localhost:4000/register",{
+    const res = await fetch("https://blogapp-backend-1apt.onrender.com/register",{
       method:'POST',
       body:JSON.stringify({username:name,password:pass}),
       headers:{'Content-type':'application/json'},

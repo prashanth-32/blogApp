@@ -25,7 +25,7 @@ export default function EditPost() {
         ],
     };
     useEffect(()=>{
-        fetch(`http://localhost:4000/edit/${params.id}`)
+        fetch(`https://blogapp-backend-1apt.onrender.com/edit/${params.id}`)
         .then(res => res.json()
         .then(res =>{
             setTitle(res.title),
@@ -47,7 +47,7 @@ export default function EditPost() {
         if(file?.[0]){
             info.set('file',file[0]);
         }
-        const res = await fetch(`http://localhost:4000/update/${params.id}`,{
+        const res = await fetch(`https://blogapp-backend-1apt.onrender.com/update/${params.id}`,{
         method:'PUT',
         body:info,
         credentials:'include',

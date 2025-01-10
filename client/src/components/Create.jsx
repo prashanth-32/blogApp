@@ -32,7 +32,7 @@ export default function Create() {
     info.set('summary',summary);
     info.set('content',content);
     info.set('file',file[0]);
-    const res = await fetch('http://localhost:4000/post',{
+    const res = await fetch('https://blogapp-backend-1apt.onrender.com/post',{
       method:'POST',
       body:info,
       credentials:'include',

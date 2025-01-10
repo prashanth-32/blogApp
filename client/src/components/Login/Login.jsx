@@ -12,7 +12,7 @@ export default function Login() {
   const {userInfo,setInfo} = useContext(UserContext);
   async function handleSubmit(event){
     event.preventDefault();
-    const res = await fetch('http://localhost:4000/login',{
+    const res = await fetch('https://blogapp-backend-1apt.onrender.com/login',{
       method : 'POST',
       body:JSON.stringify({username:username,password:password}),
       headers:{

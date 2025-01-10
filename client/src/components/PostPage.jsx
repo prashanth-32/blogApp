@@ -11,7 +11,7 @@ export default function PostPage() {
     const [redirect,setRedirect] = useState(false);
     useEffect(()=>{
         const id = params.id;
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`https://blogapp-backend-1apt.onrender.com/post/${id}`)
         .then(res => res.json()
         .then(e => {
             setInfo(e);
@@ -19,7 +19,7 @@ export default function PostPage() {
     );
     },[]);
     const deletePost = async () =>{
-        let res = await fetch(`http://localhost:4000/delete/${params.id}`,{
+        let res = await fetch(`https://blogapp-backend-1apt.onrender.com/delete/${params.id}`,{
             method:'delete',
             body:JSON.stringify({'id' : params.id}),
         })
@@ -35,7 +35,7 @@ export default function PostPage() {
       return (
     <div className="postContainer">
         <div className="postImg">
-          <img src={'http://localhost:4000/'+  info.cover} alt="" />
+          <img src={'https://blogapp-backend-1apt.onrender.com/'+  info.cover} alt="" />
         </div>
         <div className="postDescription">
             <h1>{info.title}</h1>

@@ -8,7 +8,7 @@ export default function Post({title,summary,content,createdAt,cover,author,_id})
         <div className="blog">
           <Link to={'/post/id'}>
           <div className="img">
-            <img src={'http://localhost:4000/'+  cover} alt=""/>
+            <img src={'https://blogapp-backend-1apt.onrender.com/'+  cover} alt=""/>
           </div>
           </Link>
           <div className="desc">
@@ -22,7 +22,7 @@ export default function Post({title,summary,content,createdAt,cover,author,_id})
   return (
       <div className="container">
         <div className="left">
-          <img src={'http://localhost:4000/'+  cover} alt="" />
+          <img src={'https://blogapp-backend-1apt.onrender.com/'+  cover} alt="" />
         </div>
         <div className="right">
           <p className='title'>{title}</p>
