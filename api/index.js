@@ -22,7 +22,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 dotenv.config();
 
-app.use(cors({credentials:true,origin:'http://localhost:5173'}));
+app.use(cors({credentials:true,origin:'https://blogapp-frontend-r0z0.onrender.com/'}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(path.join(__dirname + '/uploads')));
