@@ -16,13 +16,13 @@ import { fileURLToPath } from 'url';
 
 const salt = bcrypt.genSaltSync(10);
 const app = express();
-const secret = "asfjusfjasfhausydfhbas";
+const secret = "asfjusfjasfhausydfhbas"
 const upload = multer({dest:'uploads/'})
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 dotenv.config();
 
-app.use(cors({credentials:true,origin:'https://blogapp-frontend-r0z0.onrender.com/'}));
+app.use(cors({credentials:true,origin:'https://blogapp-frontend-r0z0.onrender.com'}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(path.join(__dirname + '/uploads')));
