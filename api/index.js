@@ -16,7 +16,7 @@ import { fileURLToPath } from 'url';
 
 const salt = bcrypt.genSaltSync(10);
 const app = express();
-const secret = "asfjusfjasfhausydfhbas"
+const secret = process.env.SECRET;
 const upload = multer({dest:'uploads/'})
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
